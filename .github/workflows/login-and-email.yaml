@@ -23,6 +23,7 @@ jobs:
           pip install requests
           pip install playwright
           playwright install
+          playwright install-deps
 
       - name: Run login script
         env:
