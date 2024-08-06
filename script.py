@@ -11,11 +11,11 @@ accounts = [
 ]
 
 # SMTP配置
-smtp_server = os.getenv("SMTP_SERVER")
-smtp_port = int(os.getenv("SMTP_PORT"))
-smtp_username = os.getenv("EMAIL_USERNAME")
-smtp_password = os.getenv("EMAIL_PASSWORD")
-recipient_email = os.getenv("TO_EMAIL")
+# smtp_server = os.getenv("SMTP_SERVER")
+# smtp_port = int(os.getenv("SMTP_PORT"))
+# smtp_username = os.getenv("EMAIL_USERNAME")
+# smtp_password = os.getenv("EMAIL_PASSWORD")
+# recipient_email = os.getenv("TO_EMAIL")
 
 # 登录并检查状态的函数
 def login_and_check(account):
