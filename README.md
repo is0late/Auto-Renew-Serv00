@@ -1,6 +1,6 @@
-# Auto-Renew-Serv00
+# Auto-Renew-Serv00-Single
 
-Auto-Renew-Serv00 是一个自动化项目，旨在通过定期登录Serv00面板来实现自动续期。本项目使用GitHub Actions自动执行脚本，定期登录Serv00面板并回显登录成功
+Auto-Renew-Serv00-Single 是一个自动化项目，旨在通过定期登录Serv00面板来实现自动续期。本项目使用GitHub Actions自动执行脚本，定期登录Serv00面板并回显登录成功
 
 
 ## 功能
