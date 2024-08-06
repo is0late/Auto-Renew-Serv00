@@ -26,10 +26,7 @@ jobs:
           playwright install-deps
 
       - name: Use GitHub secret
-        run: 
-          echo ${{ secrets.USERNAME1 }}
-          echo ${{ secrets.PASSWORD1 }}
-          echo ${{ secrets.PANEL_INDEX1 }}
+        run: echo "The secret is ${{ secrets.USERNAME1 }}"
         
       - name: Run login script
         env:
