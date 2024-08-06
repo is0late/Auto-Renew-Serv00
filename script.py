@@ -39,11 +39,14 @@ def login_and_check(account):
             browser.close()
 
             if is_logged_in:
+                print (f"账号 {account['username']} 登录成功！")
                 return f"账号 {account['username']} 登录成功！"
             else:
+                print (f"账号 {account['username']} 登录失败，请检查账号和密码是否正确。")
                 return f"账号 {account['username']} 登录失败，请检查账号和密码是否正确。"
 
     except Exception as e:
+        print(f"账号 {account['username']} 登录时出现错误: {e}")
         return f"账号 {account['username']} 登录时出现错误: {e}"
 
 # 汇总结果
@@ -53,20 +56,20 @@ results = [login_and_check(account) for account in accounts if account["username
 email_content = "\n\n".join(results)
 
 # 发送邮件
-msg = MIMEMultipart()
-msg['From'] = smtp_username
-msg['To'] = recipient_email
-msg['Subject'] = "Serv00面板登录结果"
+# msg = MIMEMultipart()
+# msg['From'] = smtp_username
+# msg['To'] = recipient_email
+# msg['Subject'] = "Serv00面板登录结果"
 
-msg.attach(MIMEText(email_content, 'plain'))
+# msg.attach(MIMEText(email_content, 'plain'))
 
-try:
-    server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()  # 启用StartTLS
-    server.login(smtp_username, smtp_password)
-    text = msg.as_string()
-    server.sendmail(smtp_username, recipient_email, text)
-    server.quit()
-    print("邮件发送成功")
-except Exception as e:
-    print(f"邮件发送失败: {e}")
+# try:
+#     server = smtplib.SMTP(smtp_server, smtp_port)
+#     server.starttls()  # 启用StartTLS
+#     server.login(smtp_username, smtp_password)
+#     text = msg.as_string()
+#     server.sendmail(smtp_username, recipient_email, text)
+#     server.quit()
+#     print("邮件发送成功")
+# except Exception as e:
+#     print(f"邮件发送失败: {e}")
