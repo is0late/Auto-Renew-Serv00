@@ -32,7 +32,5 @@ jobs:
           PASSWORD1: ${{ secrets.PASSWORD1 }}
           PANEL_INDEX1: ${{ secrets.PANEL_INDEX1 }}
 
-        run: 
-          echo "The secret is ${{ secrets.USERNAME1 }}"
-          python script.py
+        run: python script.py
         
