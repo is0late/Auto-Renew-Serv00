@@ -7,7 +7,7 @@ import os
 # 从环境变量中获取账户信息和后台序数
 accounts = [
     {"username": os.getenv("USERNAME1"), "password": os.getenv("PASSWORD1"), "panel_index": os.getenv("PANEL_INDEX1")},
-    {"username": os.getenv("USERNAME2"), "password": os.getenv("PASSWORD2"), "panel_index": os.getenv("PANEL_INDEX2")}
+    # {"username": os.getenv("USERNAME2"), "password": os.getenv("PASSWORD2"), "panel_index": os.getenv("PANEL_INDEX2")}
 ]
 
 # SMTP配置
