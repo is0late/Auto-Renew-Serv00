@@ -1,3 +1,7 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from playwright.sync_api import sync_playwright
 import os
 
 # 从环境变量中获取账户信息和后台序数
